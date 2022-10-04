@@ -6,7 +6,7 @@ namespace KattisSolutions
 {
     internal class FYI
     {
-        static void FYISolution()
+        internal void FYISolution()
         {
             string input = Console.ReadLine();
             if (input.Substring(0, 3) == "555")
