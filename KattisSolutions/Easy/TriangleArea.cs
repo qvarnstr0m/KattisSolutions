@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KattisSolutions
+namespace KattisSolutions.Easy
 {
     internal class TriangleArea
     {
@@ -10,7 +10,7 @@ namespace KattisSolutions
             string[] split = line.Split(new char[] { ' ' }, StringSplitOptions.None);
             float cakeHeight = float.Parse(split[0]);
             float cakeBase = float.Parse(split[1]);
-            Console.Write((cakeBase * cakeHeight) / 2);
+            Console.Write(cakeBase * cakeHeight / 2);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KattisSolutions
+namespace KattisSolutions.Easy
 {
     internal class Faktor
     {
@@ -10,7 +10,7 @@ namespace KattisSolutions
             string[] split = line.Split(new char[] { ' ' }, StringSplitOptions.None);
             int articles = int.Parse(split[0]);
             int impactFactor = int.Parse(split[1]) - 1;
-            Console.Write((articles * impactFactor) + 1);
+            Console.Write(articles * impactFactor + 1);
         }
     }
 }
