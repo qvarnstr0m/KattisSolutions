@@ -7,7 +7,7 @@ namespace KattisSolutions
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
