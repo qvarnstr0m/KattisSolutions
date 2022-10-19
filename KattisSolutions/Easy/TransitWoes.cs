@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace KattisSolutions.Easy
 {
@@ -29,10 +27,34 @@ namespace KattisSolutions.Easy
 
             string[] line4 = Console.ReadLine().Split(' ');
             int waitTime = 0;
-            for (int i = 0; i < line4.Length; i++)
+            int walkAndRideTime = 0;
+            for (int i = 0; i < bussRides; i++)
             {
-
+                if (i == 0)
+                {
+                    if (int.Parse(line2[i]) > int.Parse(line4[i]))
+                    {
+                        waitTime += (2 * int.Parse(line4[i])) - int.Parse(line2[i]);
+                    }
+                    else
+                    {
+                        waitTime += int.Parse(line4[i]) - int.Parse(line2[i]);
+                    }
+                }
+                else
+                {
+                    walkAndRideTime = int.Parse(line2[i]) + int.Parse(line3[i]);
+                    if (walkAndRideTime > int.Parse(line4[i]))
+                    {
+                        waitTime += (2 * int.Parse(line4[i])) - walkAndRideTime;
+                    }
+                    else
+                    {
+                        waitTime += int.Parse(line4[i]) - walkAndRideTime;
+                    }
+                }
             }
+
             if (startTime + walkTime + rideTime + waitTime > schoolTime)
                 Console.Write("no");
             else
