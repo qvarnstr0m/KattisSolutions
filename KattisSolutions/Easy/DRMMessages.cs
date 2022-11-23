@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace KattisSolutions
+namespace KattisSolutions.Easy
 {
     internal class DRMMessages
     {
