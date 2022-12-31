@@ -47,14 +47,7 @@ namespace KattisSolutions.Medium
                 }
             }
 
-            if (possible == false)
-            {
-                Console.Write("impossible");
-            }
-            else
-            {
-                Console.Write("possible");
-            }
+            Console.WriteLine(possible ? "possible" : "impossible");
         }
     }
 }

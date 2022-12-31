@@ -1,6 +1,7 @@
 ﻿//Only right output in first test case
 
 using System;
+using System.Collections.Generic;
 
 namespace KattisSolutions.Easy
 {
@@ -12,20 +13,23 @@ namespace KattisSolutions.Easy
             int cards = int.Parse(line1[0]);
             int secretCard = int.Parse(line1[1]);
             int iterations = int.Parse(line1[2]);
-
+            List<int> shownCards = new List<int>();
             for (int i = 0; i < iterations; i++)
             {
-                string[] nextLine = Console.ReadLine().Split(' ');
-                bool keepCard = false;
-                for (int j = 1; j < int.Parse(nextLine[0]); j++)
+                int[] nextLine = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+                for (int j = 1; j <= nextLine[0]; j++)
                 {
-                    if (int.Parse(nextLine[j]) == secretCard)
-                        keepCard = true;
+                    shownCards.Add(nextLine[j]);
                 }
-                if (keepCard == true)
+                if (shownCards.Contains(secretCard))
+                {
                     Console.WriteLine("KEEP");
+                }
                 else
+                {
                     Console.WriteLine("REMOVE");
+                }
+                shownCards.Clear();
             }
         }
     }
