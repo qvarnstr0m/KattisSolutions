@@ -4,4 +4,4 @@
 C# solutions to https://open.kattis.com/ problems, a nice way to exercise the brain while also practicing algorithms, syntax and data structures.
   
 Sorted in folders depending on difficulty.  
-On other projects I always try to comment the code thoroughly, not so much on these types of coding challenges.
+On other projects I always try to comment the code when it is relevant, not so much on these types of coding challenges.
